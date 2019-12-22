@@ -1,0 +1,14 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:12.1
+    ports:
+      - 8080:8080
+    volumes:
+    -   ./data:/var/lib/postgres
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: 249281008
